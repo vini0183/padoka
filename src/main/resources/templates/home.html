@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home - Spring Boot</title>
+	<link rel="stylesheet" th:href="@{/css/pico.css}">
+</head>
+<body>
+	<header class="container-fluid">
+		<nav>
+			<ul>
+				<li><strong>SENAI MANAGEMENT</strong></li>
+			</ul>
+			<ul>
+				<li><a th:href="@{/ }" class="secondary">Home</a></li>
+				<li><a th:href="@{/clientes}">Clientes</a></li>
+				<li><button id="mudar-tema">Mudar tema</button></li>
+			</ul>
+		</nav>
+		<hr>
+	</header>
+	<main class="container">
+		<h1>Boas-vindas ao meu site!</h1>
+		<p>Esse site foi desenvolvido para fins didáticos.</p>
+	</main>
+	<footer class="container-fluid">
+		<hr>
+		<p>Todos os direitos reservados &copy; 2025</p>
+	</footer>
+	<script th:src="@{/js/mudar-tema.js}"></script>
+</body>
+</html>

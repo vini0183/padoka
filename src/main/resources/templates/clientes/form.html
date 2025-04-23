@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novo User</title>
+    <link rel="stylesheet" th:href="@{/css/pico.css}">
+</head>
+<body>
+<header class="container-fluid">
+    <nav>
+        <ul>
+            <li><strong>SENAI MANAGEMENT</strong></li>
+        </ul>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a href="#" class="secondary">Clientes</a></li>
+            <li><button id="mudar-tema">Mudar tema</button></li>
+        </ul>
+    </nav>
+    <hr>
+</header>
+<main class="container">
+
+    <h2 th:text="${cliente.id} != null ? 'Editando cliente' : 'Adicionando cliente'"></h2>
+
+    <form th:action="@{/clientes/salvar}" method="post">
+        <div class="grid">
+            <input type="hidden" th:field="*{cliente.id}">
+            <label for="nome">
+                Nome
+                <input type="text" id="nome" name="nome" th:field="*{cliente.nome}" placeholder="Digite o teu nome" required>
+            </label>
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email" th:field="*{cliente.email}" placeholder="seu@email.com" required>
+            </label>
+            <label for="telefone">
+                Email
+                <input type="tel" id="telefone" name="telefone" th:field="*{cliente.telefone}" placeholder="(11) 99999-9999" required>
+            </label>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+
+</main>
+<footer class="container-fluid">
+    <hr>
+    <p>Todos os direitos reservados &copy; 2025</p>
+</footer>
+<script th:src="@{/js/mudar-tema.js}"></script>
+</body>
+</html>

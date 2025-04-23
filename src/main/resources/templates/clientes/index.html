@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home - Spring Boot</title>
+	<link rel="stylesheet" th:href="@{/css/pico.css}">
+</head>
+<body>
+<header class="container-fluid">
+	<nav>
+		<ul>
+			<li><strong>SENAI MANAGEMENT</strong></li>
+		</ul>
+		<ul>
+			<li><a th:href="@{/}">Home</a></li>
+			<li><a href="#" class="secondary">Clientes</a></li>
+			<li><button id="mudar-tema">Mudar tema</button></li>
+		</ul>
+	</nav>
+	<hr>
+</header>
+<main class="container">
+
+	<table class="striped" th:if="${not clientes.isEmpty()}">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOME</th>
+				<th>EMAIL</th>
+				<th>TELEFONE</th>
+				<th>AÇÕES</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="cliente : ${clientes}">
+				<td th:text="${cliente.id}">1</td>
+				<td th:text="${cliente.nome}">João da Silva</td>
+				<td th:text="${cliente.email}">joao@gmail.com</td>
+				<td th:text="${cliente.telefone}">1112345678</td>
+				<td>
+					<a role="button" th:href="@{'/clientes/editar/' + ${cliente.id}}">Editar</a>
+					<a role="button" th:href="@{'/clientes/deletar/' + ${cliente.id}}" class="contrast">Excluir</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h3 th:unless="${not clientes.isEmpty()}">Nenhum usuario adicionado</h3>
+
+	<a role="button" th:href="@{/clientes/novo}">Novo Cliente +</a>
+
+</main>
+<footer class="container-fluid">
+	<hr>
+	<p>Todos os direitos reservados &copy; 2025</p>
+</footer>
+<script th:src="@{/js/mudar-tema.js}"></script>
+</body>
+</html>
