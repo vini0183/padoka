@@ -1,35 +1,40 @@
 <!doctype html>
-<html lang="en" data-theme="dark" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" data-theme="light" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Home - Spring Boot</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home - Padoka</title>
 	<link rel="stylesheet" th:href="@{/css/pico.css}">
+	<link rel="stylesheet" th:href="@{/css/home.css}">
 </head>
 <body>
-	<header class="container-fluid">
-		<nav>
-			<ul>
-				<li><strong>SENAI MANAGEMENT</strong></li>
-			</ul>
-			<ul>
-				<li><a th:href="@{/ }" class="secondary">Home</a></li>
-				<li><a th:href="@{/clientes}">Clientes</a></li>
-				<li><button id="mudar-tema">Mudar tema</button></li>
-			</ul>
-		</nav>
-		<hr>
-	</header>
-	<main class="container">
-		<h1>Boas-vindas ao meu site!</h1>
-		<p>Esse site foi desenvolvido para fins didáticos.</p>
-	</main>
-	<footer class="container-fluid">
-		<hr>
-		<p>Todos os direitos reservados &copy; 2025</p>
-	</footer>
-	<script th:src="@{/js/mudar-tema.js}"></script>
+
+<header class="conteiner-fluid">
+	<nav>
+		<ul>
+			<li><h1><a th:href="@{/}"><strong>PADOKA</strong> 🥐</a></h1></li>
+		</ul>
+		<ul>
+			<li><a th:href="@{/clientes}">Clientes</a></li>
+			<li><a th:href="@{/produtos}">Produtos</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<h1>Boas-Vindas à Padoka!</h1>
+	<p>Esse site foi desenvolvido para gestão interna.</p>
+
+	<div class="foto-pao">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN1H_Zc33Aa-Kl8LulBp9iGaZLtk9hah_mCA&s" alt="Pão artesanal">
+		<p class="descricao">Pão rústico artesanal com fermentação natural, crosta crocante e miolo macio.</p>
+	</div>
+</main>
+
+<footer>
+	<p>Todos os direitos reservados &copy; 2025</p>
+</footer>
+
+<script th:src="@{/js/mudar-tema.js}"></script>
 </body>
 </html>

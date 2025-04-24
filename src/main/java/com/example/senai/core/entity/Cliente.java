@@ -15,8 +15,10 @@ public class Cliente {
     private Long id;
 
     private String nome;
+    private String cpf;
     private String email;
     private String telefone;
+    private String cep;
 
     public Long getId() {
         return id;
@@ -48,5 +50,21 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 }

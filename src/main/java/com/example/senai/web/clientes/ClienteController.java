@@ -16,6 +16,11 @@ public class ClienteController {
     @Autowired
     ClienteRepository clienteRepository;
 
+    @GetMapping("/form")
+    public String mostrarFormulario() {
+        return "form"; // Vai renderizar o templates/form.html
+    }
+
     @GetMapping
     public String clientes(Model model) {
         //vai ate o banco de dados, e procura todos os cliente

@@ -17,6 +17,7 @@
 		<ul>
 			<li><a th:href="@{/}">Home</a></li>
 			<li><a href="#" class="secondary">Clientes</a></li>
+			<li><a th:href="@{/produtos}" class="secondary">Produtos</a></li>
 			<li><button id="mudar-tema">Mudar tema</button></li>
 		</ul>
 	</nav>
@@ -29,8 +30,10 @@
 			<tr>
 				<th>ID</th>
 				<th>NOME</th>
+				<th>CPF</th>
 				<th>EMAIL</th>
 				<th>TELEFONE</th>
+				<th>CEP</th>
 				<th>AÇÕES</th>
 			</tr>
 		</thead>
@@ -38,8 +41,10 @@
 			<tr th:each="cliente : ${clientes}">
 				<td th:text="${cliente.id}">1</td>
 				<td th:text="${cliente.nome}">João da Silva</td>
+				<td th:text="${cliente.cpf}">111.222.333-44</td>
 				<td th:text="${cliente.email}">joao@gmail.com</td>
 				<td th:text="${cliente.telefone}">1112345678</td>
+				<td th:text="${cliente.cep}">01001-000</td>
 				<td>
 					<a role="button" th:href="@{'/clientes/editar/' + ${cliente.id}}">Editar</a>
 					<a role="button" th:href="@{'/clientes/deletar/' + ${cliente.id}}" class="contrast">Excluir</a>

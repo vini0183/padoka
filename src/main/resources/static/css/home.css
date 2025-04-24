@@ -1,0 +1,75 @@
+html, body {
+height: 100%;
+margin: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #fff8f0;
+}
+
+header, footer {
+background-color: #d9a066;
+padding: 1rem 2rem;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 1rem;
+margin: 0;
+padding: 0;
+}
+
+nav a, nav button {
+background: none;
+border: none;
+font-weight: bold;
+color: #2c2c2c;
+text-decoration: none;
+cursor: pointer;
+transition: color 0.3s;
+}
+
+nav a:hover, nav button:hover {
+color: #4f709c;
+}
+
+main {
+flex: 1;
+padding: 2rem;
+background-color: #fdf6e3;
+text-align: center;
+color: #333;
+}
+
+.foto-pao {
+margin-top: 2rem;
+}
+
+.foto-pao img {
+width: 250px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.descricao {
+margin-top: 1rem;
+font-style: italic;
+color: #5c5c5c;
+}
+
+footer {
+background-color: #e2b07f;
+text-align: center;
+font-size: 0.9rem;
+color: #3a3a3a;
+}
