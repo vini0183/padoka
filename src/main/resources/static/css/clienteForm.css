@@ -1,0 +1,118 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+header, footer {
+  background-color: #d9a066;
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #2c2c2c;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4f709c;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fdf6e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+form {
+  width: 100%;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+form input, form textarea {
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fdf6e3;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  background-color: #d9a066;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e2b07f;
+}
+
+footer {
+  background-color: #e2b07f;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  color: #3a3a3a;
+}

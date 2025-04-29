@@ -18,13 +18,13 @@ public class ProdutoController {
     public String listarProdutos(Model model) {
         var produtos = produtoRepository.findAll();
         model.addAttribute("produtos", produtos);
-        return "produtos/index"; // lista de produtos
+        return "produtos/index";
     }
 
     @GetMapping("/novo")
     public String novoProduto(Model model) {
         model.addAttribute("produto", new Produto());
-        return "produtos/form"; // formulário vazio para novo produto
+        return "produtos/form";
     }
 
     @PostMapping("/salvar")
@@ -38,7 +38,7 @@ public class ProdutoController {
         var produto = produtoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
         model.addAttribute("produto", produto);
-        return "produtos/form"; // formulário preenchido para edição
+        return "produtos/form";
     }
 
     @GetMapping("/deletar/{id}")
@@ -49,6 +49,6 @@ public class ProdutoController {
 
     @GetMapping("/form")
     public String mostrarFormulario() {
-        return "produtos/form"; // fallback, se quiser acessar diretamente
+        return "produtos/form";
     }
 }

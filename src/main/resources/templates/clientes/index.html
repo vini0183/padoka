@@ -7,18 +7,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Home - Spring Boot</title>
 	<link rel="stylesheet" th:href="@{/css/pico.css}">
+	<link rel="stylesheet" th:href="@{/css/clienteHome.css}">
 </head>
 <body>
 <header class="container-fluid">
 	<nav>
 		<ul>
-			<li><strong>SENAI MANAGEMENT</strong></li>
+			<li><h1><a th:href="@{/}"><strong>PADOKA</strong> 🥖</a></h1></li>
 		</ul>
 		<ul>
 			<li><a th:href="@{/}">Home</a></li>
 			<li><a href="#" class="secondary">Clientes</a></li>
 			<li><a th:href="@{/produtos}" class="secondary">Produtos</a></li>
-			<li><button id="mudar-tema">Mudar tema</button></li>
 		</ul>
 	</nav>
 	<hr>

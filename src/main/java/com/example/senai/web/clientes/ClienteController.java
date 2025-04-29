@@ -18,12 +18,12 @@ public class ClienteController {
 
     @GetMapping("/form")
     public String mostrarFormulario() {
-        return "form"; // Vai renderizar o templates/form.html
+        return "form";
     }
 
     @GetMapping
     public String clientes(Model model) {
-        //vai ate o banco de dados, e procura todos os cliente
+
         var clientes = clienteRepository.findAll();
         model.addAttribute("clientes", clientes);
         return "clientes/index";
