@@ -17,7 +17,9 @@ public class ProdutoController {
     @GetMapping
     public String listarProdutos(Model model) {
         var produtos = produtoRepository.findAll();
+        var nomeProdutos = produtoRepository.findAllUniqueNomes();
         model.addAttribute("produtos", produtos);
+        model.addAttribute("nomeProdutos", nomeProdutos);
         return "produtos/index";
     }
 
