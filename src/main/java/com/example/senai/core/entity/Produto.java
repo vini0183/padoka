@@ -2,6 +2,7 @@ package com.example.senai.core.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -20,8 +21,10 @@ public class Produto {
 
     private String descricao;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate fabricacao;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate validade;
 
     public Long getId() {

@@ -9,5 +9,4 @@ public class SenaiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SenaiApplication.class, args);
 	}
-
 }
