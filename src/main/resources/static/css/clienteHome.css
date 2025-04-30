@@ -119,3 +119,11 @@ footer {
 footer p {
   color: #3a3a3a;
 }
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
